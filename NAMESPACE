@@ -1,0 +1,36 @@
+import(methods)
+import(network)
+exportPattern("^[[:alpha:]]+")
+exportMethods(
+    "[",
+    "[<-",
+    "as.data.frame",
+    "as.dna",
+    "as.list",
+    "as.matrix",
+    "as.numeric",
+    "distance",
+    "grouping",
+    "haplotype",
+    "hapreord",
+    "indelcoder",
+    "initialize",
+    "length",
+    "append",
+    "names",
+    "names<-",
+    "ncol",
+    "nrow",
+    "pairnei",
+    "parsimnet",
+    "plot",
+    "polymorp",
+    "show",
+    "subs" 
+)
+exportClasses(
+    "Dna",
+     "Haplotype",
+     "Parsimnet" 
+)
+
