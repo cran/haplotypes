@@ -7,7 +7,7 @@
 \alias{haplotype,matrix-method}
 \title{Methods for function \code{haplotype} in the package \pkg{haplotypes}}
 \description{
-Inferring haplotypes from DNA sequences or user provided absolute pairwise character difference matrix. 
+Collapses identical DNA sequences into haplotypes or infering haplotypes using user provided absolute pairwise character difference matrix. 
 }
 
 \usage{

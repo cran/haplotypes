@@ -1,6 +1,6 @@
 \name{nrow-methods}
 \docType{methods}
-\alias{nrow}
+
 \alias{nrow-methods}
 \alias{nrow,Dna-method}
 \title{Returns the number of DNA sequences}

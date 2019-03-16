@@ -2,10 +2,15 @@
 \docType{methods}
 \alias{as.dna}
 \alias{as.dna-methods}
-\alias{as.dna,matrix-method}
+\alias{as.dna,character-method}
 \alias{as.dna,data.frame-method}
-\alias{as.dna,list-method}
+\alias{as.dna,DNAbin-method}
 \alias{as.dna,Haplotype-method}
+\alias{as.dna,list-method}
+\alias{as.dna,matrix-method}
+\alias{as.dna,phyDat-method}
+
+
 
 \title{Coerces an object to a \code{Dna} object}
 \description{
@@ -16,11 +21,15 @@
 \S4method{as.dna}{matrix}(x)
 \S4method{as.dna}{data.frame}(x)
 \S4method{as.dna}{list}(x)
+\S4method{as.dna}{character}(x)
 \S4method{as.dna}{Haplotype}(x)
+\S4method{as.dna}{DNAbin}(x)
+\S4method{as.dna}{phyDat}(x)
+
 }
 
 \arguments{
-  \item{x}{ a matrix, a data.frame, a list or an object of class \code{\link{Haplotype}} containing the DNA sequences.}
+  \item{x}{ a matrix, a data.frame, a list, a character, an object of class \code{\link{Haplotype}}, \code{\link{DNAbin}} \code{{ape}} or \code{\link{phyDat}} \code{{phangorn}} object containing the DNA sequences.}
 }
 
 \details{
@@ -52,8 +61,20 @@ coerces data.frame to a \code{Dna} object.
 coerces list to a \code{Dna} object.
 }
 
+\item{\code{signature(x = "character")}}{
+coerces characters to a \code{Dna} object.
+}
+
 \item{\code{signature(x = "Haplotype")}}{
 coerces a \code{\link{Haplotype}} object to a \code{Dna} object.
+}
+
+\item{\code{signature(x = "DNAbin")}}{
+coerces a \code{\link{DNAbin}} object to a \code{Dna} object.
+}
+
+\item{\code{signature(x = "phyDat")}}{
+coerces a \code{\link{phyDat}} object to a \code{Dna} object.
 }
 
 }}
@@ -103,6 +124,12 @@ dna.obj<-as.dna(x)
 dna.obj@seqlengths
 dna.obj@sequence
 
+## Coercing a character vector to a Dna object.
+seq<-c("?","A","C","g","t","-","0","1")
+x<-as.dna(seq)
+x
+
+
 ## Coercing a Haplotype object to a Dna object.
 data("dna.obj")
 x<-dna.obj
@@ -119,8 +146,13 @@ h<-haplotype(d)
 
 # returns an error
 as.dna(h)
-}
-}
+
+## Coercing a DNAbin object to a Dna object.
+require(ape)
+data(woodmouse)
+x<-as.dna(woodmouse)
+x
+
+}}
 
 \keyword{DNA ANALYSIS}
-

@@ -1,6 +1,6 @@
 \name{as.numeric-methods}
 \docType{methods}
-\alias{as.numeric}
+
 \alias{as.numeric-methods}
 \alias{as.numeric,Dna-method}
 \title{Coerces a \code{Dna} object to a numeric matrix}

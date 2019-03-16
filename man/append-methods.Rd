@@ -1,6 +1,6 @@
 \name{append-methods}
 \docType{methods}
-\alias{append}
+
 \alias{append-methods}
 \alias{append,Dna-method}
 \title{Combines two \code{Dna} objects}
@@ -34,8 +34,10 @@ Combines two \code{\link{Dna}} objects.
 
 
 \examples{
+	
 data("dna.obj")
-x <-dna.obj
+
+x<-dna.obj
 y<-dna.obj
 nrow(x)
 

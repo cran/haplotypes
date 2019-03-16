@@ -1,20 +1,20 @@
-\name{pairnei-methods}
+\name{pairPhiST-methods}
 \docType{methods}
-\alias{pairnei}
-\alias{pairnei-methods}
-\alias{pairnei,dist-method}
-\alias{pairnei,Dna-method}
-\alias{pairnei,matrix-method}
-\title{Provides the average number of pairwise Nei's (D) differences between populations}
+\alias{pairPhiST}
+\alias{pairPhiST-methods}
+\alias{pairPhiST,dist-method}
+\alias{pairPhiST,Dna-method}
+\alias{pairPhiST,matrix-method}
+\title{ Provides the pairwise PhiST between populations}
 \description{
- Function provides pairwise Nei's raw number of nucleotide differences between populations. 
- 
+This function calculates pairwise PhiST between populations using the AMOVA framework.
 }
 
 \usage{
-\S4method{pairnei}{Dna}(x,populations,indels="sic",nperm=99, subset=NULL,showprogbar=FALSE)
-\S4method{pairnei}{dist}(x,populations,nperm=99, subset=NULL,showprogbar=FALSE)
-\S4method{pairnei}{matrix}(x,populations,nperm=99, subset=NULL,showprogbar=FALSE)
+\S4method{pairPhiST}{Dna}(x,populations,indels="sic",nperm=99, negatives=FALSE, subset =NULL, 
+showprogbar=TRUE)
+\S4method{pairPhiST}{dist}(x,populations,nperm=99, negatives=FALSE, subset=NULL,showprogbar=TRUE)
+\S4method{pairPhiST}{matrix}(x,populations,nperm=99,negatives=FALSE, subset=NULL,showprogbar=TRUE)
 }
 
 \arguments{
@@ -22,22 +22,28 @@
  \item{populations}{a vector giving the populations, with one element per individual.}
  \item{indels}{the indel coding method to be used. This must be one of "sic", "5th" or "missing". Any unambiguous substring can be given.  See \code{\link{distance}} for details. }
  \item{nperm}{the number of permutations. Set this to 0 to skip the permutation procedure.}
+  \item{negatives}{boolean; if it is FALSE all negative PhiST values are replaced with zero. }
  \item{subset}{a vector of integers in the range [1, \code{length(unique(populations))}], only distances between selected population(s) and the rest of the populations are calculated. If it is NULL, all comparisons are done.}
  \item{showprogbar}{boolean; whether the progress bar is displayed or not  displayed.}
 
 }
 
 \details{
-  The null distribution of pairwise Nei's differences under the hypothesis of no difference between the populations is obtained by permuting individuals between populations.  
+  The null distribution of pairwise PhiST under the hypothesis of no difference between the populations is obtained by permuting individuals between populations.   
 }
-
 
 \value{
 	a list with following components: 
-  	\item{\code{neidist}}{a matrix giving the average number of pairwise Nei's (D) differences between populations (below diagonal elements) and  average number of pairwise differences within populations (diagonal elements).}
+  	\item{\code{PhiST}}{a matrix giving the PhiST values between populations.}
 	\item{\code{p}}{a matrix giving the p-values, or NULL if permutation test is not performed.}
+}
+
+
+\note{
+	An internal code \code{Statphi} is taken from package  \pkg{ade4} version 1.7-8 without any modification, author Sandrine Pavoine. Function \code{\link{amova}} from package \pkg{pegas} is used internally to estimate variance components, author Emmanuel Paradis.
 
 }
+
 
 \section{Methods}{
 \describe{
@@ -53,20 +59,19 @@
 }
 }}
 
+
 \references{
-Nei, M. and Li, W. H. (1979) Mathematical model for studying genetic variation in terms of restriction endonucleases. \emph{Proceedings of the National Academy of Sciences of the United States of America } \bold{76}, 5269-5273.		
-		
-  }
+Excoffier, L., Smouse, P.E. and Quattro, J.M. (1992) Analysis of molecular variance inferred
+from metric distances among DNA haplotypes: application to human mitochondrial DNA restriction
+data. \emph{Genetics}, \bold{131}, 479-491.
+}
 
 \author{
 Caner Aktas, \email{caktas.aca@gmail.com}
 }
 
-
-
 \examples{
 data("dna.obj")
-
 
 ### Method for signature 'Dna'.
 x<-dna.obj
@@ -75,41 +80,40 @@ populations<-c("pop1","pop1","pop1","pop1","pop1","pop1","pop1","pop2",
 "pop2","pop2","pop2","pop2","pop3","pop4","pop3","pop4","pop4")
 
 ##skip permutation testing
-pn<-pairnei(x, populations, nperm=0)
-pn
+pst<-pairPhiST(x, populations, nperm=0)
+pst
 
-#Between populations
-as.dist(pn$neidist)
-
-#Within populations
-diag(pn$neidist)
+##allow negative PhiST values
+pst<-pairPhiST(x, populations, nperm=0, negatives=TRUE)
+pst
 
 ##Gaps as missing characters.
-pn <-pairnei(x, populations, indels="m", nperm=0)
-pn
+pst<-pairPhiST(x, populations, indels="m", nperm=0, negatives=TRUE)
+pst
 
-##using subset, third population against others
-pn<-pairnei(x, populations, nperm=0,subset=c(3))
-pn
+##using subset, second population against others
+pst <-pairPhiST(x, populations, nperm=0,subset=c(2))
+pst
+
 
 \dontrun{
 ## 999 permutations.
-pn<-pairnei(x, populations, nperm=999, showprogbar=TRUE)
-pn
+pst<-pairPhiST(x, populations, nperm=999,showprogbar=TRUE)
+pst
 
 ## random populations
 x<-dna.obj
 populations<-sample(1:4,nrow(x),replace=TRUE)
-pn<-pairnei(x, populations, nperm=999, showprogbar=TRUE)
-pn
+pst<-pairPhiST(x, populations, nperm=999,showprogbar=TRUE)
+pst
 
 ## populations based on clusters
 x<-dna.obj
 d<-distance(x)
 hc<-hclust(d,method="ward.D")
 populations<-cutree(hc,4)
-pn<-pairnei(x, populations, nperm=999, showprogbar=TRUE)
-pn
+pst<-pairPhiST(x, populations, nperm=999,showprogbar=TRUE)
+pst
 }
 
 ### Method for signature 'dist'.
@@ -118,8 +122,8 @@ x<-dna.obj[c(1,20,21,26,27,28,30,3,4,7,13,14,15,16,23,24,25),,as.matrix=FALSE]
 populations<-c("pop1","pop1","pop1","pop1","pop1","pop1","pop1","pop2",
 "pop2","pop2","pop2","pop2","pop3","pop4","pop3","pop4","pop4")
 d<-distance(x)
-pn<-pairnei(d, populations,nperm=0)
-pn
+pst<-pairPhiST(d, populations, nperm=0)
+pst
 
 ### Method for signature 'matrix'.
 x<-dna.obj
@@ -127,12 +131,10 @@ x<-dna.obj[c(1,20,21,26,27,28,30,3,4,7,13,14,15,16,23,24,25),,as.matrix=FALSE]
 populations<-c("pop1","pop1","pop1","pop1","pop1","pop1","pop1","pop2",
 "pop2","pop2","pop2","pop2","pop3","pop4","pop3","pop4","pop4")
 d<-as.matrix(distance(x))
-pn<-pairnei(d, populations,nperm=0)
-pn
+pst<-pairPhiST(d, populations, nperm=0)
+pst
 
 }
-
-
 
 
 \keyword{DNA}

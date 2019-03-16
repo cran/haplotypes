@@ -1,6 +1,6 @@
 \name{as.matrix-methods}
 \docType{methods}
-\alias{as.matrix}
+
 \alias{as.matrix-methods}
 \alias{as.matrix,Dna-method}
 \title{Methods for function \code{as.matrix} in the Package \pkg{haplotypes}}

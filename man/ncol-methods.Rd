@@ -1,6 +1,6 @@
 \name{ncol-methods}
 \docType{methods}
-\alias{ncol}
+
 \alias{ncol-methods}
 \alias{ncol,Dna-method}
 \title{Returns the length of the longest DNA sequence}

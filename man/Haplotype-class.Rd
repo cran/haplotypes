@@ -28,6 +28,8 @@ Objects can be created by calls of the form \code{new("Haplotype", haplist, hapi
     \item{grouping}{\code{signature(x = "Haplotype")}: creates a matrix with haplotypes as rows, grouping factor (populations, species, etc.) as columns and abundance as entries. }
     \item{hapreord}{\code{signature(x = "Haplotype")}: reorders haplotypes according to the ordering factor.}
     \item{length}{\code{signature(x = "Haplotype")}: returns the number of haplotypes. }
+     \item{pieplot}{\code{signature(x = "Parsimnet", y = "Haplotype")}: plot pie charts on statistical parsimony network.}
+     \item{pielegend}{\code{signature(x = "Parsimnet", y = "Haplotype")}: add legends to pie charts produced using \code{\link{pieplot}}.}
     \item{show}{\code{signature(object = "Haplotype")}: displays the object briefly. }
 	 }
 }

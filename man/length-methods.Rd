@@ -1,6 +1,6 @@
 \name{length-methods}
 \docType{methods}
-\alias{length}
+
 \alias{length-methods}
 \alias{length,Dna-method}
 \alias{length,Haplotype-method}

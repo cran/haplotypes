@@ -1,6 +1,6 @@
 \name{as.data.frame-methods}
 \docType{methods}
-\alias{as.data.frame}
+
 \alias{as.data.frame-methods}
 \alias{as.data.frame,Dna-method}
 \title{Coerces a \code{Dna} object to a data.frame}

@@ -10,20 +10,20 @@ Function for creating a matrix with haplotypes as rows, grouping factor (populat
 }
 
 \usage{
-\S4method{grouping}{Haplotype}(x,factor)
+\S4method{grouping}{Haplotype}(x,factors)
 }
 
 \arguments{
  \item{x}{an object of class  \code{\link{Haplotype}}. }
- \item{factor}{a vector or factor giving the grouping variable (populations, species, etc.), with one element per individual. }
+ \item{factors}{a vector or factor giving the grouping variable (populations, species, etc.), with one element per individual. }
 }
 
 \value{
 	a list with two components: 
 	 \describe{
-  	\item{\code{hapmat}:}{a matrix with haplotypes as rows, grouping factor (populations, species, etc.) as columns and abundance as entries.}
+  	\item{\code{hapmat}:}{a matrix with haplotypes as rows, levels of the grouping factor (populations, species, etc.) as columns and abundance as entries.}
 
-	\item{\code{hapvec}:}{a vector giving the haplotype number for each individual. }
+	\item{\code{hapvec}:}{a vector giving the haplotype identities of individuals. }
 }}
 
 
@@ -52,11 +52,8 @@ h<-haplotype(x)
 # character vector 'populations' is a grouping factor.
 populations<-c("pop1","pop1","pop2","pop3","pop3","pop3") 
 
-
 # length of the argument 'factor' is equal to the number of sequences
-g<-grouping(h,factor=populations) 
-
-# length of the returned component 'hapvec' is equal to the number of sequences
+g<-grouping(h,factors=populations) 
 g
 
 }

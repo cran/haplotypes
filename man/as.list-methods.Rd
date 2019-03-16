@@ -1,6 +1,6 @@
 \name{as.list-methods}
 \docType{methods}
-\alias{as.list}
+
 \alias{as.list-methods}
 \alias{as.list,Dna-method}
 \alias{as.list,Haplotype-method}

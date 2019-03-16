@@ -3,6 +3,8 @@
 \alias{[-methods}
 \alias{[,Dna-method}
 \alias{[<-,Dna-method}
+\alias{[,Dna,ANY,ANY,ANY-method}
+\alias{[<-,Dna,ANY,ANY,ANY-method}
 \title{Extract or replace parts of an object of class \code{Dna} }
 \description{
 Operators acting on sequence matrix to extract or
