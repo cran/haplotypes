@@ -2,7 +2,9 @@
 \docType{methods}
 \alias{unique-methods}
 \alias{unique,Dna-method}
-\title{ Extract Unique Sequences}
+\alias{unique,Dna,ANY-method}
+
+\title{Extract Unique Sequences}
 \description{
  \code{unique} returns a list with duplicate sequences removed. 
 }
@@ -22,8 +24,6 @@
 	This function behaves somehow similar to \code{\link{haplotype}}, however indels and missing characters are not taken into account.
   
 }
-
-
 
 
 \section{Methods}{
@@ -62,3 +62,5 @@ as.list(as.dna(h))
 length(h)
 
 }
+
+\keyword{DNA ANALYSIS}

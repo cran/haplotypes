@@ -1,6 +1,6 @@
-f69023f88498c4e4b6026657deb0ac21 *DESCRIPTION
+207f6ca0bc1913efa865e11adb2f7e65 *DESCRIPTION
 9dacb573ca9deb29d90d1469982ceff4 *NAMESPACE
-6f7d16342b320615746d916a5369be6e *R/classdna.r
+d877b5b9f341cdb12c8815bf1350c990 *R/classdna.r
 2887ded785058553f859e0f7807248c2 *R/classhaplotype.r
 bdbf4d5920af375c0196fc1008e1e5fb *R/classparsimnet.r
 4abbe4265f6caf585b92494f7ebc87a0 *data/dna.obj.rda
@@ -36,7 +36,7 @@ c20791aa2151e70aff654805c50330ec *man/names-methods.Rd
 2f18ea1dbfd6640acd9f9a07151ef7fa *man/nrow-methods.Rd
 2cced9f1773bf36083a362fe3f8490cb *man/pairPhiST-methods.Rd
 33c2f80fbb4073f5f64f58a206398f49 *man/pairnei-methods.Rd
-5e33fc663d91d788d4abbfc78eccdcec *man/parsimnet-methods.Rd
+2e02b261ac3a153642cc81a23762efa1 *man/parsimnet-methods.Rd
 525735d1ca8e21022187a26f79e3cf01 *man/pielegend-methods.Rd
 41c3a6bf848fac696e2a7d1f83a57a15 *man/pieplot-methods.Rd
 02c5f5b077178af032e72678768bdc3e *man/plot-methods.Rd
@@ -44,9 +44,9 @@ fa8b6acaab0f98edb1003f17368bc435 *man/polymorp-methods.Rd
 1fe102f3c44f43385eb917b3191bec01 *man/range-methods.Rd
 fd91f725ac68335393b9efa32d6de613 *man/read.fas.Rd
 3fb81ed330b40a899b010fe23be99934 *man/remove.gaps-methods.Rd
-e3cac472d4bba4bec0dc4520772bc84d *man/rownames-methods.Rd
+4895c8e320ae4efe198b6d4556d52e44 *man/rownames-methods.Rd
 794a3b34091e2e08a3d01c567609887a *man/show-methods.Rd
 c5015267a45a6fabdba5e47873a2db97 *man/subs-methods.Rd
 22b241ca9768b2c45d266b6d94d7b8de *man/tolower-methods.Rd
-08ac4105b6eec49c4927ee43ce42819d *man/unique-methods.Rd
-1d890da9120d5facd6df5956a2592de7 *man/z[-methods.Rd
+2190fa839eb1638ffcadb2c3122764de *man/unique-methods.Rd
+b0446920ca68e1432ab2f61871290b40 *man/z[-methods.Rd

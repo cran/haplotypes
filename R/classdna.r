@@ -245,7 +245,6 @@ setReplaceMethod("rownames","Dna", function(x,value)
 
 
 
-
 #Generic as.dna
 
 setGeneric (

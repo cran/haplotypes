@@ -20,19 +20,18 @@
 
 \arguments{
  \item{x}{an object of class \code{\link{Dna}}, dist, or matrix.}
- \item{indels}{the indel coding method to be used. This must be one of "sic", "5th" or "missing". Any unambiguous substring can be given.  See \code{\link{distance}} for details. }
+ \item{indels}{the indel coding method to be used. This must be one of "sic", "5th" or "missing". Any unambiguous substring can be given.  See \code{\link{distance}} for details.}
   \item{seqlength}{an integer of length one giving the sequence length information (number of characters). }
   \item{prob}{a numeric vector of length one in the range [0.01, 0.99] giving the probability of parsimony as defined in Templeton et al. (1992). In order to set maximum connection steps to Inf (to connect all the haplotypes in a single network), set the probability to NULL. }
  
   }
   
    \details{
- The network estimation methods implemented in  \code{parsimnet} function finds one of the most parsimonious network (or sub-networks if connection between haplotypes exceeds the parsimony limit).  This is an implemetation of the TCS method proposed in Templeton et al. (1992) and Clement et al. (2002).\code{parsimnet} function generates an unambiguous haplotype network without loops. If more than one best networks found (results in ambiguous connections), only a network with the lowest average all-pairs distance is returned. Loops may occur only if they are present in initial haplotype distance matrix when using algorithmic method.
-   
-}
+ The network estimation methods implemented in  \code{parsimnet} function finds one of the most parsimonious network (or sub-networks if connection between haplotypes exceeds the parsimony limit).  This is an implemetation of the TCS method proposed in Templeton et al. (1992) and Clement et al. (2002).\code{parsimnet} function generates an unambiguous haplotype network without loops. If more than one best networks found (results in ambiguous connections), only a network with the lowest average all-pairs distance is returned. Loops may occur only if they are present in initial haplotype distance matrix.
+   }
 
 \value{
-  S4 methods for signature 'Dna', 'matrix' or 'dist' returns an object of class \code{\link{Parsimnet}}. }
+  S4 methods for signature 'Dna', 'matrix' or 'dist' returns an object of class \code{\link{Parsimnet}}.}
 
 
 \section{Methods}{
