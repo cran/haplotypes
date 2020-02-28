@@ -7,7 +7,6 @@ import(phangorn)
 
 importFrom("stats", "as.dist", "dist", "integrate")
 importFrom("utils", "combn", "head")
-importFrom("pegas", "amova")
 importFrom("sna", "geodist")
 importFrom("grDevices", "rainbow")
 importFrom("graphics", "lines", "locator", "mtext", "par", "plot",

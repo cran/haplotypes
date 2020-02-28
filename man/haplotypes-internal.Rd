@@ -18,6 +18,7 @@
 \alias{pairneidist}
 \alias{pairPhiSTdist}
 \alias{parsnet}
+\alias{pegas.amova}
 \alias{polys}
 \alias{recdistG}
 \alias{ren.dupli}

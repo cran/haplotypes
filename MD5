@@ -1,6 +1,6 @@
-207f6ca0bc1913efa865e11adb2f7e65 *DESCRIPTION
-9dacb573ca9deb29d90d1469982ceff4 *NAMESPACE
-d877b5b9f341cdb12c8815bf1350c990 *R/classdna.r
+fb43e583c573a9efab64640b5b292dbc *DESCRIPTION
+c5fc1d7bf4f2e1386738bed2bd63fb49 *NAMESPACE
+bd0234dfe7179efd2861dda325c197eb *R/classdna.r
 2887ded785058553f859e0f7807248c2 *R/classhaplotype.r
 bdbf4d5920af375c0196fc1008e1e5fb *R/classparsimnet.r
 4abbe4265f6caf585b92494f7ebc87a0 *data/dna.obj.rda
@@ -24,7 +24,7 @@ a6a9650504280e13559c109db51ac5a9 *man/distance-methods.Rd
 65f240178491002c4a92708c15ed0df5 *man/dna.obj.Rd
 660988c1c78de9d745e9f23104e2caa5 *man/grouping-methods.Rd
 046485a1595f25f97e4edcf0573c4db3 *man/haplotype-methods.Rd
-a77151cc5cf10bb967e6c66d9947f699 *man/haplotypes-internal.Rd
+56cbf2b5548a4140b8ea8be68afb1fc6 *man/haplotypes-internal.Rd
 b31041df738e6fa471c89918c859b651 *man/haplotypes-package.Rd
 2e05e057702cd67e479dfd0d99249c08 *man/hapreord-methods.Rd
 ae42c202d0778cdbf1c79f7338963ebe *man/homopoly-methods.Rd
@@ -34,7 +34,7 @@ ae42c202d0778cdbf1c79f7338963ebe *man/homopoly-methods.Rd
 c20791aa2151e70aff654805c50330ec *man/names-methods.Rd
 5c2394cc7ad32e6b7d2f18d31cdc8268 *man/ncol-methods.Rd
 2f18ea1dbfd6640acd9f9a07151ef7fa *man/nrow-methods.Rd
-2cced9f1773bf36083a362fe3f8490cb *man/pairPhiST-methods.Rd
+976f8167121c475472850b89d62def8c *man/pairPhiST-methods.Rd
 33c2f80fbb4073f5f64f58a206398f49 *man/pairnei-methods.Rd
 2e02b261ac3a153642cc81a23762efa1 *man/parsimnet-methods.Rd
 525735d1ca8e21022187a26f79e3cf01 *man/pielegend-methods.Rd

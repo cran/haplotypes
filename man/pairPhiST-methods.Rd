@@ -40,7 +40,7 @@ showprogbar=TRUE)
 
 
 \note{
-	An internal code \code{Statphi} is taken from package  \pkg{ade4} version 1.7-8 without any modification, author Sandrine Pavoine. Function \code{\link{amova}} from package \pkg{pegas} is used internally to estimate variance components, author Emmanuel Paradis.
+	An internal code \code{Statphi} is taken from package  \pkg{ade4} version 1.7-8 without any modification, author Sandrine Pavoine. Function \code{amova} from package \pkg{pegas} is used internally to estimate variance components, author Emmanuel Paradis.
 
 }
 
