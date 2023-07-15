@@ -1,6 +1,6 @@
-4e24cf7a9525e5dd9ec53e1dd0ee676f *DESCRIPTION
+ec297f48b71fb3f187425217ec3b380e *DESCRIPTION
 c5fc1d7bf4f2e1386738bed2bd63fb49 *NAMESPACE
-01996a33a0fde5ca705d366050d7a7a4 *R/classdna.r
+ab267c9b6fe7d016d34ec658be3cc41b *R/classdna.r
 2887ded785058553f859e0f7807248c2 *R/classhaplotype.r
 eb85bc3b709f3e7c2fb96e047b774603 *R/classparsimnet.r
 68b329da9893e34099c7d8ad5cb9c940 *README.md
@@ -50,4 +50,4 @@ fd91f725ac68335393b9efa32d6de613 *man/read.fas.Rd
 c5015267a45a6fabdba5e47873a2db97 *man/subs-methods.Rd
 22b241ca9768b2c45d266b6d94d7b8de *man/tolower-methods.Rd
 2190fa839eb1638ffcadb2c3122764de *man/unique-methods.Rd
-6c5c501073274285966279b1ba5fa00c *man/z[-methods.Rd
+c03c91695360764235cb8295465cc9a6 *man/z[-methods.Rd
